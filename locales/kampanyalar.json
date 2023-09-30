@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "canonical": "/kampanyalar",
+    "title": "Kampanyalar | Pizza Master",
+    "description": ""
+  },
+  "breadcrumbList": [
+    {
+      "link": "/",
+      "text": "Ana Sayfa"
+    },
+    {
+      "link": "",
+      "text": "Kampanyalar"
+    }
+  ],
+
+  "pageInfo": {
+    "logo": "/images/logo.png",
+    "title": "Puan Biriktirin!",
+    "desc": "5 Siparişinizde Bir Bedava Pizza Kuponu Kazanın",
+    "image": "/images/kampanya-banner.jpg",
+    "imageMobile": "/images/eylul-kampanyasi/kampanyalar-mobile-tr.png"
+  },
+  "campain": {
+    "activeTxt": "Aktif",
+    "inactiveTxt": "Biten Kampanyalar",
+    "allCampainTxt": "Tüm Kampanyalar",
+    "noneTxt": "Aradığınız kriterde kampanya bulunmamaktadır.",
+    "listOptions": [
+      {
+        "value": "all",
+        "text": "Tüm Kampanyalar"
+      }
+    ],
+    "dataCampaigns": [
+      {
+        "id": 1,
+        "image": "/images/kampanya-1.jpg",
+        "imageMobile": "/images/kapmanyalar/kampanya5.png",
+        "title": "Seçili Büyük Boy Pizzalarda %15 İndirim!",
+        "desc": "2 büyük boy pizza alana 2. pizzada %15 indirim."
+      },
+      {
+        "id": 2,
+        "image": "/images/kampanya-2.jpg",
+        "imageMobile": "/images/kapmanya-2.jpg",
+        "title": "İkili Özel Kampanya",
+        "desc": "2 orta boy pizza alanlara 1lt içecek yanında bedava!"
+      },
+      {
+        "id": 3,
+        "image": "/images/kampanya-3.jpg",
+        "imageMobile": "/images/kapmanyalar/kampanya2-mobile.png",
+        "title": "Gel Al Kampanyası",
+        "desc": "Gel al siparişinizde %20 indirim!"
+      }
+    ]
+  }
+}

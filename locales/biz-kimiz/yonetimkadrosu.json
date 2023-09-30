@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "canonical": "/bizi-taniyin/yonetim-kadrosu",
+    "title": "Yönetim Kadrosu | Pizza Master",
+    "description": ""
+  },
+  "breadcrumbList": [
+    {
+      "link": "/",
+      "text": "Ana Sayfa"
+    },
+    {
+      "link": "/",
+      "text": "Biz Tanıyın"
+    },
+    {
+      "link": "",
+      "text": "Yönetim Kadrosu"
+    }
+  ]
+}

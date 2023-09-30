@@ -1,0 +1,43 @@
+@import "../../../styles/mixins";
+.numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 50px;
+  @include breakpoint(md) {
+    grid-template-columns: 1fr;
+  }
+
+  .numbersTitle {
+    @include breakpoint(md) {
+      width: 100%;
+    }
+    background: #ff6720;
+    border-radius: 0px 5px 5px 0px;
+    margin-left: -75px;
+    padding: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+    h3 {
+      color: white;
+    }
+  }
+  .numberList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @include breakpoint(md) {
+      grid-template-columns: 1fr;
+    }
+    .numberCard {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      p {
+        color: #ff6720;
+        font-weight: bold;
+        font-size: 35px;
+      }
+    }
+  }
+}

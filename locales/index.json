@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "canonical": "/",
+    "title": "Anasayfa | Pizza Master",
+    "description": ""
+  },
+  "heroData": {
+    "bannerImage": "/images/banner-pizza.jpg",
+    "title": "Sanal mutfağımıza hoş geldiniz!",
+    "text": "Çeşitli türde ürünlere ulaşabileceğiniz sanal mağazamıza hoşgeldiniz.",
+    "bilgi": "Daha fazla bilgi",
+    "click": "Tıkla"
+  },
+  "urunlerTitle": "Ürünler",
+  "offer": {
+    "title": "Sizin için en iyisini sunuyoruz",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam facilis provident quas dolore sit necessitatibus obcaecati quo nulla perferendis corporis iure rerum quae eius natus, eligendi id similique fugiat incidunt odit vitae animi temporibus earum ipsam. Omnis beatae recusandae molestiae nulla porro laudantium tenetur optio ea, animi nostrum distinctio pariatur.",
+    "image": "/images/hamur.jpg"
+  },
+  "whyUs": {
+    "title": "Neden Biz?",
+    "dataFeatureList": [
+      {
+        "id": 0,
+        "title": "Güven",
+        "desc": "Güçlü ekibimizle birlikte tüm işlemleri senin için halleder, en güvenilir hizmeti sunarız."
+      },
+      {
+        "id": 1,
+        "title": "Hız",
+        "desc": "Pizzanızı seçer seçmez sıcak halde elinize ulaşır."
+      },
+      {
+        "id": 2,
+        "title": "Lezzet",
+        "desc": "Her damak tadına uygun lezzet."
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "canonical": "/urunler",
+    "title": "Ürünlerimiz | Techshop",
+    "description": "Techshop; hızlı, kolay ve güvenilir teknoloji ürünleri sunar."
+  },
+  "breadcrumbList": [
+    {
+      "link": "/",
+      "text": "Ana Sayfa"
+    },
+    {
+      "link": "",
+      "text": "Ürünler"
+    }
+  ]
+}

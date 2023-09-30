@@ -1,0 +1,153 @@
+@import "../../../styles/mixins";
+
+.navigation {
+  .mainNavigation {
+    width: 100%;
+    height: 100%;
+    @include breakpoint(md) {
+      overflow: hidden;
+      position: relative;
+    }
+    .menu {
+      display: flex;
+      @include breakpoint(md) {
+        position: absolute;
+        flex-direction: column;
+        visibility: hidden;
+        z-index: 999;
+      }
+
+      .menuList {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        svg {
+          margin-left: 5px;
+        }
+        &:hover {
+          svg {
+            transform: rotate(180deg);
+            transition: all 200ms ease;
+          }
+        }
+        .menuItem {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .hamburger {
+    @include breakpoint(md) {
+      display: block;
+      svg {
+        font-size: 25px;
+        fill: #ff6720;
+      }
+    }
+
+    display: none;
+  }
+}
+.hasSubMenu {
+  cursor: pointer;
+  color: #ff6720;
+  .subMenuList {
+    display: none;
+  }
+
+  &:hover {
+    .subMenuList {
+      @include breakpoint(md) {
+        top: 120px;
+        position: relative;
+        box-shadow: none;
+        border-bottom: 1px solid black;
+        top: 0;
+        display: none;
+      }
+      position: absolute;
+      top: 80px;
+      padding: 10px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      display: block;
+      z-index: 999;
+      background: white;
+      li {
+        margin-block: 10px;
+        min-width: 150px;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: black;
+          .rightArrow {
+            display: none;
+            margin-left: 10px;
+          }
+          &:hover {
+            .rightArrow {
+              display: block;
+              transform: rotate(270deg);
+            }
+            color: #ff6720;
+            transition: all 0.2s ease-in;
+          }
+        }
+      }
+    }
+  }
+}
+
+.active {
+  position: absolute;
+  top: 16%;
+  left: 0%;
+  z-index: 999;
+  background: white;
+  width: 100%;
+  transform: translateY(0);
+  transition: all 0.4s ease;
+  .menuList {
+    padding: 10px;
+  }
+}
+@include breakpoint(md) {
+  .menuList {
+    .subMenuList {
+      display: none;
+    }
+    .menuItem {
+      svg {
+        margin-left: 5px;
+      }
+      display: flex;
+      align-items: center;
+    }
+  }
+  .mobileShow {
+    .menuItem {
+      svg {
+        margin-left: 5px;
+      }
+      display: flex;
+      align-items: center;
+    }
+    .subMenuList {
+      border-bottom: 1px solid gray;
+      display: block !important;
+      li {
+        margin-block: 0 !important;
+        padding: 10px;
+        a {
+          color: #ff6720 !important;
+          font-size: 15px;
+        }
+      }
+      svg {
+        display: none;
+      }
+    }
+  }
+}

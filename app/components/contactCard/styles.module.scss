@@ -1,0 +1,28 @@
+.contact {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin-block: 20px;
+  .imageBox {
+    margin-right: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 100%;
+    svg {
+      width: 25px !important;
+      height: 25px !important;
+    }
+  }
+  .textLine {
+    display: flex;
+    flex-direction: column;
+    p {
+      font-weight: bold;
+    }
+    a {
+      color: #ff6720;
+      margin-top: 5px;
+    }
+  }
+}

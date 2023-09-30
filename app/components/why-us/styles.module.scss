@@ -1,0 +1,25 @@
+@import "../../../styles/mixins";
+.topTitle {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  @include breakpoint(xs) {
+    grid-template-columns: 1fr;
+  }
+  gap: 20px;
+  margin-bottom: 50px;
+  .cardList {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    h4 {
+      color: #ff6720;
+    }
+  }
+}

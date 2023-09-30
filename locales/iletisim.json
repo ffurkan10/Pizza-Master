@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "canonical": "/iletisim",
+    "title": "Bize Ulaşın | Pizza Master",
+    "description": "Bizimle her konuda iletişime geçebilir, sayfada bulunan formu doldurarak görüş ve önerilerinizi bizimle paylaşabilirsin."
+  },
+  "breadcrumbList": [
+    {
+      "link": "/",
+      "text": "Ana Sayfa"
+    },
+    {
+      "link": "",
+      "text": "İletişim"
+    }
+  ],
+  "pageInfo": {
+    "title": "Bize Ulaşın",
+    "desc": "Petrol Ofisi’nin yüzde 100 iştiraki olarak dijital krediler konusunda çözümler sunuyoruz!",
+    "image": "https://via.placeholder.com/1190x400/2"
+  },
+  "contentTxt": {
+    "title": "Daha Fazla Yardıma mı İhtiyacınız Var? Yardım Etmek İçin Buradayız",
+    "text": "Müşteri temsilcilerimize hafta içi 09:00-19:00 saatleri arasında ulaşabilir veya istediğiniz her an bize e-posta ulaştırabilirsiniz. "
+  },
+  "homeContent": {
+    "littleTitle": "BİZİMLE İLETİŞİME GEÇİN",
+    "title": "Bize Ulaşın",
+    "link": "Genel sorularının yanıtlarına için hızlıca <a href='/'> Destek Merkezi </a> ve <a href='/sikca-sorulan-sorular'> Sıkça Sorulan Sorular </a> üzerinden ulaşabilirsin veya iletişim formumuzu 7/24 doldurarak bize iletebilirsin.",
+    "desc": [
+      {
+        "id": 0,
+        "text": "Bizimle iletişime geçmek istediğin konuyu seç.",
+        "icon": "/images/icons/check-dark-new.svg"
+      },
+      {
+        "id": 1,
+        "text": "Bilgilerini ve talebini doldur.",
+        "icon": "/images/icons/check-dark-new.svg"
+      },
+      {
+        "id": 2,
+        "text": "En kısa zamanda seninle iletişime geçelim.",
+        "icon": "/images/icons/check-dark-new.svg"
+      }
+    ]
+  },
+  "formTxt": {
+    "title": "Bizimle İletişime Geçin",
+    "desc": "Bizimle her konuda iletişime geçebilir, alttaki formu doldurarak düşünce ve görüşlerini bizimle paylaşabilirsin.",
+    "name": "İsim",
+    "surname": "Soyisim",
+    "email": "E-Posta Adresi",
+    "message": "Mesajınız",
+    "tel": "Cep Telefonu Numarası",
+    "send": "Gönder",
+    "kvkkInfo": "<span> Kişisel verilerimin neden ve nerelerden toplandığı, nasıl kullanıldığı ve diğer haklarımla ilgili olarak Kişisel Verilerin Korunması Kanunu uyarınca yapılan <a href='/kisisel-verilere-iliskin-aydinlatma-metni'> bilgilendirmeyi </a> okudum. </span>",
+    "searchCountry": "Ülke Ara",
+    "control": "Cep telefonu numarana doğrulama kodu iletilecektir.",
+    "icon": "/images/icons/dark-info.svg",
+    "errors": {
+      "invalid": "Geçerli bir değer giriniz.",
+      "mail": "Lütfen geçerli bir E-Posta adresi giriniz!",
+      "empty": "Bu alan zorunlu!",
+      "insufficientLength": "Daha uzun bir değer giriniz!",
+      "insufficientTextLength": "Daha uzun bir değer giriniz!"
+    }
+  },
+  "dataContactInfoList": [
+    {
+      "id": 1,
+      "title": "Telefon Numarası",
+      "littleText": "Hafta iç 09:00 - 19:00 arası",
+      "text": "0 (542) 259 27 21"
+    },
+    {
+      "id": 0,
+      "title": "E-Posta",
+      "littleText": "7/24 yazabilirsin.",
+      "text": "ffurkankocabyk@hotmail.com"
+    }
+  ],
+  "corporates": {
+    "title": "Kurumsal Bilgiler",
+    "dataCorporateList": [
+      {
+        "id": 0,
+        "title": "Adres",
+        "text": "Ünalan Mah. Libadiye Cad. EMAAR Square Sitesi F Blok No: 82-F İç Kapı No: 2 Üsküdar/İstanbul"
+      },
+      {
+        "id": 1,
+        "title": "Ticaret Unvanı",
+        "text": "Ofisfinans Finansman A.Ş"
+      },
+      {
+        "id": 2,
+        "title": "Ticari Sicil Numarası",
+        "text": "346937-5"
+      },
+      {
+        "id": 3,
+        "title": "Vergi Numarası",
+        "text": "Ümraniye V.D 6341001652"
+      },
+      {
+        "id": 4,
+        "title": "MERSİS Numarası",
+        "text": "0634100165200001"
+      }
+    ]
+  },
+
+  "mailSuccessMessage": {
+    "isOpen": true,
+    "title": "Mesajınız başarıyla gönderildi.",
+    "content": "En kısa zamanda size geri dönüş yapacağız.",
+    "buttonText": "Tamam"
+  },
+  "mailFailedMessage": {
+    "isOpen": true,
+    "title": "Mesajınız gönderilemedi.",
+    "content": "Lütfen tekrar deneyiniz.",
+    "buttonText": "Tamam"
+  },
+  "bottomSecTitle": "Daha Fazlasına Eriş",
+  "dataPageNavigation": [
+    {
+      "title": "Credin’in Bir Parçası Ol",
+      "desc": "Credin’in kuruluş hikayesi ve bağlı bulunduğu şirketler grubu hakkında daha fazlasını keşfet.",
+      "buttonText": "Kariyer",
+      "buttonLink": "/kariyer"
+    },
+    {
+      "title": "Güçlü İş Birliklerimiz",
+      "desc": "Credin’in Türkiye’nin önde gelen şirketleriyle olan iş birliklerini keşfedin.",
+      "buttonText": "İş Birliklerimiz",
+      "buttonLink": "/bizi-taniyin/is-birlikleri"
+    }
+  ]
+}

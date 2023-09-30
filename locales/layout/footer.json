@@ -1,0 +1,168 @@
+{
+  "dataFooterMenu": {
+    "leftTitle": "BİZİ TANIYIN",
+    "rightTitle": "HİZMETLERİMİZ",
+    "destekTitle": "DESTEK MERKEZİ",
+    "ticariTitle": "TİCARİ",
+    "bireyselTitle": "BİREYSEL",
+    "iletisimTitle": "İLETİŞİM",
+    "hakkimizda": [
+      {
+        "title": "Biz Kimiz?",
+        "href": "/bizi-taniyin/biz-kimiz"
+      },
+      {
+        "title": "Vizyon, Misyon ve Değerler",
+        "href": "/bizi-taniyin/vizyon-misyon-degerler"
+      },
+      {
+        "title": "Yönetim Kadrosu",
+        "href": "/bizi-taniyin/yonetim-kadrosu"
+      },
+      {
+        "title": "İş Birlikleri",
+        "href": "/bizi-taniyin/is-birlikleri"
+      },
+      {
+        "title": "Kariyer",
+        "href": "/kariyer"
+      },
+      {
+        "title": "Resmi Raporlar",
+        "href": "/bizi-taniyin/resmi-raporlar"
+      }
+    ],
+    "ticariList": [
+      {
+        "href": "/ticari-kredi/arac-finansmani",
+        "title": "Araç Finansmanı"
+      },
+      {
+        "href": "/ticari-kredi/proje-finansmani",
+        "title": "Proje Finansmanı"
+      },
+      {
+        "href": "/ticari-kredi/stok-finansmani",
+        "title": "Stok Finansmanı"
+      },
+      {
+        "href": "/ticari-kredi/solar-finansmani",
+        "title": "Solar Finansmanı"
+      },
+      {
+        "href": "/ticari-kredi/is-yeri-finansmani",
+        "title": "İş Yeri Finansmanı"
+      },
+      {
+        "href": "/ticari-kredi/ac-dc-sarj-istasyonu-finansmani",
+        "title": "AC/DC Şarj İstasyonu Finansmanı"
+      }
+    ],
+    "bireyselList": [
+      {
+        "href": "/bireysel-kredi/tasit-kredisi",
+        "title": "0 Km Taşıt Kredisi"
+      },
+      {
+        "href": "/bireysel-kredi/2-el-tasit-kredisi",
+        "title": "2. El Taşıt Kredisi"
+      }
+    ],
+    "urunler": [],
+    "kampanyalar": {
+      "title": "KAMPANYALAR",
+      "href": "/kampanyalar"
+    },
+    "destek": [
+      {
+        "title": "Bize Ulaşın",
+        "href": "/iletisim"
+      },
+      {
+        "title": "Sıkça Sorulan Sorular",
+        "href": "/sikca-sorulan-sorular"
+      }
+    ]
+  },
+  "footerEnd": {
+    "contactTitle": "İLETİŞİM",
+    "addressTitle": "Adres:",
+    "contactInfoTitle": "İletişim Numarası:",
+    "mailTitle": "E-Posta:",
+    "followUsTitle": "BİZİ TAKİP EDİN"
+  },
+  "dataSocialMedia": [
+    {
+      "link": "https://www.facebook.com/CredinVar/videos/320412343454662",
+      "text": "Facebook",
+      "icon": "/images/facebook-footer.svg"
+    },
+    {
+      "link": "https://twitter.com/credinvar",
+      "text": "Twitter",
+      "icon": "/images/twitter-footer.svg"
+    },
+    {
+      "link": "https://www.instagram.com/credinvar/",
+      "text": "Instagram",
+      "icon": "/images/instagram-footer.svg"
+    },
+    {
+      "link": "https://www.linkedin.com/company/credinvar",
+      "text": "Linkedin",
+      "icon": "/images/linkedin-footer.svg"
+    },
+    {
+      "link": "https://www.youtube.com/channel/UCPpdbb2FWk1tnFfM3A8wqXw",
+      "text": "Youtube",
+      "icon": "/images/youtube-footer.svg"
+    }
+  ],
+  "app": {
+    "title": "UYGULAMAMIZI İNDİR",
+    "appLinks": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ]
+  },
+  "dataContactInfo": {
+    "address": "Ünalan Mah. Libadiye Cad. EMAAR Square Sitesi F Blok No: 82-F İç Kapı No: 2 Üsküdar/İstanbul",
+    "phone": "0 (850) 227 33 46",
+    "mail": "musterihizmetleri@credin.com.tr"
+  },
+  "footerBottom": {
+    "menuData": [
+      {
+        "href": "/gizlilik-politikasi",
+        "text": "Gizlilik Politikası"
+      },
+      {
+        "href": "/kisisel-verilere-iliskin-aydinlatma-metni",
+        "text": "Kişisel Verilerin Korunması"
+      },
+      {
+        "href": "/cerez-politikasi",
+        "text": "Çerez Politikası"
+      },
+      {
+        "href": "/kullanim-kosullari",
+        "text": "Kullanım Koşulları"
+      },
+      {
+        "href": "https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/22574",
+        "text": "Bilgi Toplumu Hizmetleri"
+      },
+      {
+        "href": "/ucretler-ve-masraflar",
+        "text": "Ürün ve Hizmet Bilgileri"
+      }
+    ],
+    "copyright": "Tüm hakları saklıdır."
+  }
+}

@@ -1,0 +1,94 @@
+@import "../../styles/mixins";
+.cartHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  h2 {
+    color: #ff6720;
+  }
+  span {
+    margin-left: 10px;
+    font-weight: lighter;
+    color: #fc8853;
+  }
+}
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .emptyCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    p {
+      margin-block: 20px;
+    }
+    button {
+      color: white;
+      background-color: #ff6720;
+      outline: none;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  }
+}
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  .cartList {
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-block: 20px;
+    .left {
+      .imageBox {
+        width: 350px;
+        height: 250px;
+        @include breakpoint(md) {
+          width: 300px;
+          height: 200px;
+        }
+        @include breakpoint(sm) {
+          width: 250px;
+          height: 150px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .right {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      .quantity {
+        display: flex;
+        margin-top: 20px;
+        p {
+          margin-inline: 20px;
+        }
+      }
+      button {
+        width: 30px;
+        cursor: pointer;
+        height: 30px;
+        background-color: #ff6720;
+        color: white;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        border-radius: 100%;
+        border: none;
+      }
+    }
+  }
+}

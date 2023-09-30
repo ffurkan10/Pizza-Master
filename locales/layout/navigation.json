@@ -1,0 +1,34 @@
+{
+  "dataNavigation": [
+    {
+      "href": "/urunler",
+      "text": "Ürünler"
+    },
+    {
+      "href": "/kampanyalar",
+      "text": "Kampanyalar"
+    },
+    {
+      "href": "/bizi-taniyin",
+      "text": "Bizi Tanıyın",
+      "subMenu": [
+        {
+          "href": "/bizi-taniyin/biz-kimiz",
+          "text": "Biz Kimiz?"
+        },
+        {
+          "href": "/bizi-taniyin/yonetim-kadrosu",
+          "text": "Yönetim Kadrosu"
+        }
+      ]
+    },
+    {
+      "href": "/iletisim",
+      "text": "İletişim"
+    },
+    {
+      "href": "/sepet",
+      "text": "Sepet"
+    }
+  ]
+}

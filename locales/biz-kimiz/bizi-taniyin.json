@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "canonical": "/bizi-taniyin/biz-kimiz",
+    "title": "Biz Kimiz? | Pizza Master",
+    "description": ""
+  },
+  "breadcrumbList": [
+    {
+      "link": "/",
+      "text": "Ana Sayfa"
+    },
+    {
+      "link": "/bizi-taniyin",
+      "text": "Biz Tanıyın"
+    },
+    {
+      "link": "",
+      "text": "Biz Kimiz?"
+    }
+  ],
+  "pageInfo": {
+    "title": "PizzaMaster Kimdir?",
+    "desc": "",
+    "image": "/images/hakkimizda-banner.jpg"
+  },
+  "bannerNumbersTitle": "Önemli Bilgiler",
+  "dataNumbers": [
+    {
+      "title": "7/24",
+      "text": "Hizmet Sağlayan"
+    },
+    {
+      "title": "%100",
+      "text": "Müşteri Memnuniyeti Odaklı"
+    },
+    {
+      "title": "%100",
+      "text": "Dijital, Hızlı, Kolay"
+    }
+  ],
+
+  "WhoWeAre": {
+    "title": "Biz Kimiz?",
+    "image": "/images/whoweare.jpg",
+    "dataAffiliates": [
+      {
+        "id": 1,
+        "title": "Marka Hikayesi",
+        "desc": "Pizza Lezzetleri, lezzetli pizza ve İtalyan mutfağının en iyi yönlerini bir araya getiren bir lezzet yolculuğudur. 20 yılı aşkın süredir, kalite ve lezzet konusundaki bağlılığımızla, müşterilerimize unutulmaz bir pizza deneyimi sunmayı hedefliyoruz."
+      },
+      {
+        "id": 0,
+        "title": "Misyon ve Vizyon",
+        "desc": "Misyonumuz, herkesin mükemmel bir pizza deneyimi yaşamasını sağlamaktır. En taze malzemeleri kullanarak ve özenle hazırlayarak, her dilimde lezzetin tadını çıkarmanızı sağlamak için çalışıyoruz. Vizyonumuz ise her daim müşteri memnuniyetini ön planda tutarak büyümek ve pizza tutkumuzu paylaşmak."
+      },
+      {
+        "id": 2,
+        "title": "Taze Malzemeler",
+        "desc": "Pizza Lezzetleri olarak, her zaman en taze ve kaliteli malzemeleri kullanmaya özen gösteriyoruz. Hamurumuzdan soslarımıza, sebzelerimizden peynirimize kadar her şey en yüksek standartlara uygun şekilde seçilir ve hazırlanır."
+      },
+      {
+        "id": 3,
+        "title": "El Yapımı İtalyan Tarifi",
+        "desc": "Pizza yapma sanatını İtalyan ustalarından öğrendik ve geleneksel tarifleri özgün bir dokunuşla sunuyoruz. Her pizza, lezzetli bir İtalyan deneyimi sunmak için el yapımı olarak hazırlanır ve taş fırınlarda pişirilir."
+      },
+      {
+        "id": 4,
+        "title": "Müşterilerimize Odaklanma",
+        "desc": "Müşterilerimizin memnuniyeti, bizim için en öncelikli konudur. Sizler için daha iyi bir deneyim sunabilmek için sürekli olarak geri bildirimlerinizi dinliyor ve işimize dair yenilikler yapmaya çalışıyoruz."
+      },
+      {
+        "id": 5,
+        "title": "İletişim ve Destek",
+        "desc": "Sizlerle daha yakın bir ilişki kurabilmek için 7/24 destek hattımız ve iletişim kanallarımızla her zaman yanınızdayız. Sorularınızı yanıtlamak ve yardımcı olmak için buradayız."
+      }
+    ]
+  },
+  "actionBanner": {
+    "title": "Sorun mu var? Sana yardım etmek için buradayız.",
+    "buttonText": "Bize Ulaş",
+    "buttonLink": "/iletisim"
+  },
+  "dataPageNavigation": [
+    {
+      "title": "Credin’in Bir Parçası Ol",
+      "desc": "Credin’in kuruluş hikayesi ve bağlı bulunduğu şirketler grubu hakkında daha fazlasını keşfet.",
+      "buttonText": "Kariyer",
+      "buttonLink": "/kariyer"
+    },
+    {
+      "title": "Güçlü İş Birliklerimiz",
+      "desc": "Credin’in Türkiye’nin önde gelen şirketleriyle olan iş birliklerini keşfedin.",
+      "buttonText": "İş Birliklerimiz",
+      "buttonLink": "/bizi-taniyin/is-birlikleri"
+    }
+  ]
+}

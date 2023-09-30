@@ -1,0 +1,36 @@
+@import "../../../styles/mixins";
+
+.detay {
+  display: flex;
+  margin-block: 50px;
+  @include breakpoint(md) {
+    flex-direction: column;
+  }
+  .imageBox {
+    margin-bottom: 30px;
+    margin-right: 20px;
+    h2 {
+      margin-bottom: 20px;
+    }
+    img {
+      width: 400px;
+      height: 300px;
+      @include breakpoint(xs) {
+        width: 350px;
+        height: 250px;
+      }
+    }
+  }
+  .tarif {
+    .malzemeler {
+      .list {
+        margin-bottom: 20px;
+        li {
+          list-style-type: circle;
+          margin-block: 10px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

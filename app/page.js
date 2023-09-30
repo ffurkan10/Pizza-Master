@@ -1,95 +1,69 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import React from "react";
+import DataPageTr from "../locales/index.json";
+import Banner from "./components/banner";
+import ProductCards from "./components/productCard";
+import TextImage from "./components/textImage";
+import WhyUs from "./components/why-us";
+import { getData } from "@/utils/getData/index.js";
+import Head from "next/head";
+// import FaqData from "@/locales/sss.js";
+import Question from "./components/question/Question";
 
-export default function Home() {
+const faqData = [
+  {
+    id: 0,
+    title: "Teslimat süresi nedir?",
+    desc: "Teslimat süresi, siparişinizin büyüklüğüne ve teslimat adresinize bağlı olarak değişebilir. Genellikle siparişinizin 30-45 dakika içinde teslim edilmesi hedeflenir.",
+  },
+  {
+    id: 1,
+    title: "Gluten-free (gluten içermeyen) pizza seçeneğiniz var mı?",
+    desc: "Evet, müşterilerimize gluten içermeyen pizza seçenekleri sunuyoruz.",
+  },
+  {
+    id: 2,
+    title: "İade veya değişim politikanız nedir?",
+    desc: "Müşteri memnuniyeti bizim için önceliktir. Siparişinizle ilgili herhangi bir sorunuz veya şikayetiniz varsa, lütfen bizimle iletişime geçin.",
+  },
+];
+
+const Home = async () => {
+  const pizza = await getData();
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <Head>
+        <title>{DataPageTr.meta?.title}</title>
+        <meta property="og:title" content="My page title" key="title" />
+      </Head>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <Banner
+        image={DataPageTr?.heroData?.bannerImage}
+        title={DataPageTr?.heroData?.title}
+        text={DataPageTr?.heroData?.text}
+        bilgi={DataPageTr?.heroData?.bilgi}
+        click={DataPageTr?.heroData?.click}
+      />
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <ProductCards
+        title={DataPageTr?.urunlerTitle}
+        data={pizza.data.recipes.slice(1, 5)}
+        isHome
+      />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+      <TextImage
+        title={DataPageTr?.offer?.title}
+        text={DataPageTr?.offer?.text}
+        image={DataPageTr?.offer?.image}
+      />
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
+      <WhyUs
+        title={DataPageTr?.whyUs?.title}
+        data={DataPageTr?.whyUs?.dataFeatureList}
+      />
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+      <Question data={faqData} />
+    </>
+  );
+};
+
+export default Home;

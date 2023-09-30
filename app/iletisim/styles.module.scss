@@ -1,0 +1,33 @@
+@import "../../styles/mixins";
+.contact {
+  margin-bottom: 50px;
+
+  .header {
+    margin-bottom: 50px;
+  }
+  .iletisim {
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint(md) {
+      flex-direction: column;
+      .contactMain {
+        width: 100%;
+      }
+      .form {
+        width: 100%;
+      }
+    }
+  }
+
+  .contactMain {
+    width: 40%;
+    .leftText {
+      .iletisimText {
+        margin-block: 25px;
+      }
+    }
+  }
+}
+.form {
+  width: 50%;
+}
