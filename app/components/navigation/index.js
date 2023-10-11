@@ -6,11 +6,19 @@ import Styles from "./styles.module.scss";
 import cn from "classnames";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
+import { useIsLoggedIn } from "@/config/Hooks";
+import { logOut } from "@/features/Auth/AuthSlice";
+import { useDispatch } from "react-redux";
 
 const Navigation = ({ data }) => {
   const [sidebar, setSidebar] = useState(false);
   const [mobileSubMenu, setMobileSubMenu] = useState({});
   const menuRef = useRef(null);
+  const dispatch = useDispatch();
+  const isLoggedIn = useIsLoggedIn();
+  const handleLogOut = () => {
+    dispatch(logOut());
+  };
 
   const showSidebar = () => {
     setSidebar(!sidebar);
@@ -45,7 +53,6 @@ const Navigation = ({ data }) => {
   const handleLinkClick = (index) => {
     setSidebar(false);
   };
-
   return (
     <div className={Styles.navigation} ref={menuRef}>
       <div className={Styles.hamburger}>
@@ -107,6 +114,15 @@ const Navigation = ({ data }) => {
             );
           })}
         </ul>
+        {isLoggedIn ? (
+          <button className={Styles.out} onClick={handleLogOut}>
+            Çıkış Yap
+          </button>
+        ) : (
+          <Link className={Styles.in} href="giris-yap">
+            Giriş Yap
+          </Link>
+        )}
       </nav>
     </div>
   );

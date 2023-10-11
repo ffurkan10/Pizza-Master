@@ -6,7 +6,6 @@ import InputMask from "react-input-mask";
 
 const Input = React.forwardRef(({ ...props }, ref) => {
   const {
-    name,
     label,
     placeholder,
     value,
@@ -15,15 +14,10 @@ const Input = React.forwardRef(({ ...props }, ref) => {
     mask,
     prependIcon,
     appendIcon,
-    removable = false,
     error,
     hasErrorControl = true,
   } = props;
   const [isChanged, setIsChanged] = useState(false);
-
-  const deleteValue = () => {
-    onChange?.("");
-  };
 
   const handlerOnChange = (event) => {
     onChange?.(event);
@@ -70,12 +64,6 @@ const Input = React.forwardRef(({ ...props }, ref) => {
               placeholder={placeholder}
             />
           )}
-          {/* {!!appendIcon && <span className="icon icon-append">{appendIcon}</span>} */}
-          {/* {removable && (
-            <div onClick={() => deleteValue()} className="remove-button">
-              <IconClose />
-            </div>
-          )} */}
         </div>
       </div>
     </div>
