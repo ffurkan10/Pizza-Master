@@ -1,3 +1,4 @@
+"use client";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import {
@@ -18,14 +19,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-getAnalytics(app);
+if (typeof window !== "undefined") {
+  getAnalytics(app);
+}
 export const auth = getAuth(app);
-
-// export const signUp = async (name, email, password) => {
-//   await createUserWithEmailAndPassword(auth, email, password);
-//   await updateCurrentUser(auth, { displayName: name });
-// };
-
-// export const signIn = async (email, password) => {
-//   await signInWithEmailAndPassword(auth, email, password);
-// };

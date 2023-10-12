@@ -18,8 +18,8 @@ export default function RootLayout({ children }) {
           <Header />
           <main>
             <ToastContainer position="bottom-left" />
-
-            <Providers>{children}</Providers>
+            {children}
+            {/* <Providers></Providers> */}
           </main>
           <Footer />
         </Provider>
