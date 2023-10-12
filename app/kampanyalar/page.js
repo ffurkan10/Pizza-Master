@@ -5,6 +5,7 @@ import KampanyaData from "../../locales/kampanyalar.json";
 import CampaignCard from "../components/campaignCard";
 import Breadcrumb from "../components/breadcrumb";
 import Head from "next/head";
+import Campaign from "../components/campaign";
 
 const Campaigns = () => {
   return (
@@ -28,6 +29,8 @@ const Campaigns = () => {
         title={KampanyaData?.campain?.allCampainTxt}
         data={KampanyaData?.campain?.dataCampaigns}
       />
+
+      <Campaign />
     </>
   );
 };

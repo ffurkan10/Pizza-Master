@@ -13,13 +13,16 @@ const Banner = ({ who, image, title, text, bilgi, isCampaign, logo }) => {
         who && Styles.whoBanner
       )}
     >
-      <Image
-        className={Styles.imageBox}
-        src={image}
-        width={1400}
-        height={400}
-        alt="banner"
-      />
+      {image && (
+        <Image
+          className={Styles.imageBox}
+          src={image}
+          width={1400}
+          height={400}
+          alt="banner"
+        />
+      )}
+
       <div className={Styles.bannerText}>
         {logo && <Image width={80} height={80} src={logo} />}
         <h1>{title}</h1>

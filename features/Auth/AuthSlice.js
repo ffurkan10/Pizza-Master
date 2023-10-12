@@ -42,6 +42,7 @@ export const logIn = createAsyncThunk(
 
 export const logOut = createAsyncThunk("auth/logout", async () => {
   await signOut(auth);
+  toast.success("Hesaptan çıkış yapıldı.");
 });
 
 const AuthSlice = createSlice({

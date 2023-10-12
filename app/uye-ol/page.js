@@ -9,12 +9,16 @@ import {
 } from "../../features/Auth/AuthSlice";
 import Link from "next/link";
 import SignForm from "../components/sign";
+import { useIsLoggedIn } from "@/config/Hooks";
+import { useRouter } from "next/navigation";
 
 const SignUp = () => {
   const name = useSelector((state) => state?.auth?.name);
   const email = useSelector((state) => state?.auth?.email);
   const password = useSelector((state) => state?.auth?.password);
   const isLoading = useSelector((state) => state?.auth?.isLoading);
+  const isLoggedIn = useIsLoggedIn();
+  const router = useRouter();
 
   const dispatch = useDispatch();
 
@@ -36,58 +40,25 @@ const SignUp = () => {
   };
 
   return (
-    // <form onSubmit={handleSubmit}>
-    //   <h1>Üye Ol</h1>
-    //   <input
-    //     type="text"
-    //     autoFocus
-    //     autoComplete="name"
-    //     name="name"
-    //     placeholder="Ad"
-    //     required
-    //     onChange={handleName}
-    //     value={name}
-    //   />
-    //   <input
-    //     type="email"
-    //     autoComplete="email"
-    //     name="email"
-    //     placeholder="Email"
-    //     required
-    //     onChange={handleEmail}
-    //     value={email}
-    //   />
-    //   <input
-    //     type="password"
-    //     autoComplete="password"
-    //     name="password"
-    //     placeholder="Şifre"
-    //     required
-    //     onChange={handlePassword}
-    //     value={password}
-    //   />
-    //   <button type="submit" disabled={isLoading}>
-    //     {isLoading ? "Yükleniyor..." : "Üye ol"}
-    //   </button>
-    //   <div className="sign__container__link">
-    //     <Link href="/giris-yap">Bir hesabın var mı? Giriş yap</Link>
-    //   </div>
-    // </form>
     <>
-      <SignForm
-        title="Hesap Oluştur"
-        handleEmail={handleEmail}
-        handleSubmit={handleSubmit}
-        handleName={handleName}
-        handlePassword={handlePassword}
-        email={email}
-        password={password}
-        isLoading={isLoading}
-        isSignUp
-        button="Oluştur"
-        linkText="Hesabınız var mı? Giriş yap"
-        linkHref="/giris-yap"
-      />
+      {isLoggedIn ? (
+        router.push("/")
+      ) : (
+        <SignForm
+          title="Hesap Oluştur"
+          handleEmail={handleEmail}
+          handleSubmit={handleSubmit}
+          handleName={handleName}
+          handlePassword={handlePassword}
+          email={email}
+          password={password}
+          isLoading={isLoading}
+          isSignUp
+          button="Oluştur"
+          linkText="Hesabınız var mı? Giriş yap"
+          linkHref="/giris-yap"
+        />
+      )}
     </>
   );
 };

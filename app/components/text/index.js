@@ -8,7 +8,7 @@ const TextComponent = ({ data, topTitle, image }) => {
     <div className="container">
       <div className={Styles.textComp}>
         <h1>{topTitle}</h1>
-        <Banner who image={image} />
+        {image && <Banner who image={image} />}
         {/* <div className={Styles.topTitle}>
           <h1>{topTitle}</h1>
         </div> */}

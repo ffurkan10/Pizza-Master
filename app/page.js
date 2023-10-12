@@ -8,6 +8,7 @@ import { getData } from "@/utils/getData/index.js";
 import Head from "next/head";
 // import FaqData from "@/locales/sss.js";
 import Question from "./components/question/Question";
+import Campaign from "./components/campaign";
 
 const faqData = [
   {
@@ -29,6 +30,7 @@ const faqData = [
 
 const Home = async () => {
   const pizza = await getData();
+
   return (
     <>
       <Head>
@@ -60,6 +62,8 @@ const Home = async () => {
         title={DataPageTr?.whyUs?.title}
         data={DataPageTr?.whyUs?.dataFeatureList}
       />
+
+      <Campaign />
 
       <Question data={faqData} />
     </>

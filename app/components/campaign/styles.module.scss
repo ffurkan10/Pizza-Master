@@ -1,0 +1,49 @@
+.bannerBlock {
+  margin-block: 100px;
+  .banner {
+    background-color: #ff6720;
+    padding: 40px;
+    border-radius: 8px;
+    .disabled {
+      font-size: 14px;
+      color: rgb(49, 49, 165);
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+    h3 {
+      color: white;
+      margin-bottom: 20px;
+    }
+    p {
+      color: white;
+      a {
+        background-color: white;
+        color: #ff6720;
+        margin-left: 5px;
+        padding: 5px 10px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .cupon {
+        margin-left: 5px;
+        color: rgb(49, 49, 165);
+        cursor: pointer;
+      }
+    }
+  }
+}
+.cuponHead {
+  .copy {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 25px;
+  }
+}
+.alert {
+  color: green;
+  font-size: 14px;
+}

@@ -1,6 +1,6 @@
 "use client";
 import { addToCart, decreaseCart, remove } from "@/features/CartSlice";
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Styles from "./styles.module.scss";
 import cn from "classnames";
@@ -10,6 +10,12 @@ import Image from "next/image";
 const Sepet = () => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  const [checkInput, setCheckInput] = useState("");
+  const [lastCoupon, setLastCoupon] = useState("");
+
+  const handleInputChange = (event) => {
+    setCheckInput(event.target.value);
+  };
 
   const handleRemove = (cartProduct) => {
     dispatch(remove(cartProduct));
@@ -23,6 +29,19 @@ const Sepet = () => {
     dispatch(decreaseCart(cartProduct));
   };
 
+  const checkCoupon = () => {
+    const lastGeneratedCoupon = sessionStorage.getItem("lastGeneratedCoupon");
+
+    if (lastGeneratedCoupon) {
+      if (checkInput === lastGeneratedCoupon) {
+        setLastCoupon("İndirim kuponunuzu kullanabilirsiniz.");
+      } else {
+        setLastCoupon("Yanlış kupon kodu girdiniz.");
+      }
+    } else {
+      setLastCoupon("Hesabınıza kayıtlı bir kod bulunmuyor.");
+    }
+  };
   return (
     <div className="container">
       <div className={Styles.cartHeader}>
@@ -65,6 +84,32 @@ const Sepet = () => {
           </li>
         ))}
       </ul>
+
+      {/* {cart?.cartItems?.length === 0 ? (
+        ""
+      ) : (
+        <div className={Styles.discount}>
+          <h4>İndirim Kodu:</h4>
+          <input type="text" />
+          <button>Sorgula</button>
+        </div>
+      )} */}
+      <div className={Styles.discount}>
+        <div className={Styles.check}>
+          <h4>İndirim Kodu:</h4>
+          <input value={checkInput} onChange={handleInputChange} type="text" />
+          <button onClick={checkCoupon}>Sorgula</button>
+        </div>
+        <span
+          className={
+            lastCoupon === "İndirim kuponunuzu kullanabilirsiniz."
+              ? Styles.green
+              : Styles.red
+          }
+        >
+          {lastCoupon}
+        </span>
+      </div>
     </div>
   );
 };

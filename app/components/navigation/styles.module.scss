@@ -13,6 +13,8 @@
       outline: none;
       border-radius: 8px;
       border: none;
+      cursor: pointer;
+
       @include breakpoint(md) {
         display: none;
       }
@@ -146,6 +148,7 @@
     border-radius: 8px;
     border: none;
     margin: 10px;
+    cursor: pointer;
   }
   .menuList {
     .subMenuList {
