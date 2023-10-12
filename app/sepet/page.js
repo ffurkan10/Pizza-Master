@@ -1,6 +1,6 @@
 "use client";
 import { addToCart, decreaseCart, remove } from "@/features/CartSlice";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Styles from "./styles.module.scss";
 import cn from "classnames";
@@ -30,13 +30,16 @@ const Sepet = () => {
   };
 
   const checkCoupon = () => {
-    const lastGeneratedCoupon = sessionStorage.getItem("lastGeneratedCoupon");
-
-    if (lastGeneratedCoupon) {
-      if (checkInput === lastGeneratedCoupon) {
-        setLastCoupon("İndirim kuponunuzu kullanabilirsiniz.");
+    if (sessionStorage.getItem("lastGeneratedCoupon")) {
+      const lastGeneratedCoupon = sessionStorage.getItem("lastGeneratedCoupon");
+      if (lastGeneratedCoupon) {
+        if (checkInput === lastGeneratedCoupon) {
+          setLastCoupon("İndirim kuponunuzu kullanabilirsiniz.");
+        } else {
+          setLastCoupon("Yanlış kupon kodu girdiniz.");
+        }
       } else {
-        setLastCoupon("Yanlış kupon kodu girdiniz.");
+        setLastCoupon("Hesabınıza kayıtlı bir kod bulunmuyor.");
       }
     } else {
       setLastCoupon("Hesabınıza kayıtlı bir kod bulunmuyor.");
