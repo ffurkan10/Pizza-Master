@@ -1,0 +1,74 @@
+{
+  "publisher": {
+    "title": "Yayıncılar",
+
+    "dataPublisher": [
+      {
+        "id": 1,
+        "name": "All Recipes"
+      },
+      {
+        "id": 2,
+        "name": "Simply Recipes"
+      },
+      {
+        "id": 3,
+        "name": "BBC Good Food"
+      },
+      {
+        "id": 4,
+        "name": "Closet Cooking"
+      },
+      {
+        "id": 5,
+        "name": "A Spicy Perspective"
+      },
+      {
+        "id": 6,
+        "name": "My Baking Addiction"
+      },
+      {
+        "id": 7,
+        "name": "What's Gaby Cooking"
+      },
+      {
+        "id": 8,
+        "name": "Epicurious"
+      }
+    ],
+    "dataPublisherBottom": [
+      {
+        "id": 9,
+        "name": "The Pioneer Woman"
+      },
+      {
+        "id": 10,
+        "name": "Bon Appetit"
+      },
+      {
+        "id": 11,
+        "name": "Chow"
+      },
+      {
+        "id": 12,
+        "name": "Lisa's Kitchen"
+      },
+      {
+        "id": 13,
+        "name": "Vintage Mixer"
+      },
+      {
+        "id": 14,
+        "name": "Real Simple"
+      },
+      {
+        "id": 15,
+        "name": "Two Peas and Their Pod"
+      },
+      {
+        "id": 16,
+        "name": "Jamie Oliver"
+      }
+    ]
+  }
+}

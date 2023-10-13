@@ -1,8 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 
+const getCartItemsFromSessionStorage = () => {
+  if (typeof window !== "undefined" && sessionStorage) {
+    const cartItems = sessionStorage.getItem("cartItems");
+    return cartItems ? JSON.parse(cartItems) : [];
+  }
+  return [];
+};
+
 const initialState = {
-  cartItems: [],
+  cartItems: getCartItemsFromSessionStorage(),
   cartTotalQuantity: 0,
   cartTotalAmount: 0,
   isLoading: false,
@@ -34,6 +42,7 @@ const CartSlice = createSlice({
       );
       state.cartItems = nextCartItems;
       toast.info(`${action.payload.title} sepetinizden çıkarıldı`);
+      sessionStorage.setItem("cartItems", JSON.stringify(nextCartItems));
     },
 
     decreaseCart: (state, action) => {
@@ -50,6 +59,7 @@ const CartSlice = createSlice({
         );
         toast.info(`${action.payload.title} silindi`);
         state.cartItems = nextCartItems;
+        sessionStorage.setItem("cartItems", JSON.stringify(nextCartItems));
       }
     },
   },

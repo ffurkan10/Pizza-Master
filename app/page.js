@@ -9,24 +9,27 @@ import Head from "next/head";
 // import FaqData from "@/locales/sss.js";
 import Question from "./components/question/Question";
 import Campaign from "./components/campaign";
+import SwiperData from "@/locales/publisher.json";
+import SwiperComp from "./components/swiper";
+// import SwiperComp from "./components/swiper";
 
-const faqData = [
-  {
-    id: 0,
-    title: "Teslimat süresi nedir?",
-    desc: "Teslimat süresi, siparişinizin büyüklüğüne ve teslimat adresinize bağlı olarak değişebilir. Genellikle siparişinizin 30-45 dakika içinde teslim edilmesi hedeflenir.",
-  },
-  {
-    id: 1,
-    title: "Gluten-free (gluten içermeyen) pizza seçeneğiniz var mı?",
-    desc: "Evet, müşterilerimize gluten içermeyen pizza seçenekleri sunuyoruz.",
-  },
-  {
-    id: 2,
-    title: "İade veya değişim politikanız nedir?",
-    desc: "Müşteri memnuniyeti bizim için önceliktir. Siparişinizle ilgili herhangi bir sorunuz veya şikayetiniz varsa, lütfen bizimle iletişime geçin.",
-  },
-];
+// const faqData = [
+//   {
+//     id: 0,
+//     title: "Teslimat süresi nedir?",
+//     desc: "Teslimat süresi, siparişinizin büyüklüğüne ve teslimat adresinize bağlı olarak değişebilir. Genellikle siparişinizin 30-45 dakika içinde teslim edilmesi hedeflenir.",
+//   },
+//   {
+//     id: 1,
+//     title: "Gluten-free (gluten içermeyen) pizza seçeneğiniz var mı?",
+//     desc: "Evet, müşterilerimize gluten içermeyen pizza seçenekleri sunuyoruz.",
+//   },
+//   {
+//     id: 2,
+//     title: "İade veya değişim politikanız nedir?",
+//     desc: "Müşteri memnuniyeti bizim için önceliktir. Siparişinizle ilgili herhangi bir sorunuz veya şikayetiniz varsa, lütfen bizimle iletişime geçin.",
+//   },
+// ];
 
 const Home = async () => {
   const pizza = await getData();
@@ -58,14 +61,20 @@ const Home = async () => {
         image={DataPageTr?.offer?.image}
       />
 
+      {/* <SwiperComp
+        title={SwiperData?.publisher?.title}
+        datatop={SwiperData?.publisher?.dataPublisher}
+        databottom={SwiperData?.publisher?.dataPublisherBottom}
+      /> */}
+
+      <Campaign />
+
       <WhyUs
         title={DataPageTr?.whyUs?.title}
         data={DataPageTr?.whyUs?.dataFeatureList}
       />
 
-      <Campaign />
-
-      <Question data={faqData} />
+      {/* <Question data={faqData} /> */}
     </>
   );
 };

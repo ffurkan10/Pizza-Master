@@ -50,6 +50,7 @@ const Sepet = () => {
       );
     }
   };
+
   return (
     <div className="container">
       <div className={Styles.cartHeader}>
