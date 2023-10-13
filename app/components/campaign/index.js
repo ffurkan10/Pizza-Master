@@ -13,9 +13,14 @@ const Campaign = () => {
   const [coupon, setCoupon] = useState("");
   const [cuponModal, setCuponModal] = useState(false);
   const [alert, setAlert] = useState("");
-  const [isCouponButtonDisabled, setIsCouponButtonDisabled] = useState(
-    sessionStorage.getItem("isCouponButtonDisabled") === "true"
-  );
+  const [isCouponButtonDisabled, setIsCouponButtonDisabled] = useState(false);
+
+  useEffect(() => {
+    if (sessionStorage.getItem("isCouponButtonDisabled")) {
+      setIsCouponButtonDisabled(true);
+    }
+  }, []);
+
   const [disabledText, setDisabledText] = useState("");
 
   async function copyToClipboard(text) {

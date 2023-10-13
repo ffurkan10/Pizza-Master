@@ -30,16 +30,12 @@ const Sepet = () => {
   };
 
   const checkCoupon = () => {
-    if (sessionStorage.getItem("lastGeneratedCoupon")) {
-      const lastGeneratedCoupon = sessionStorage.getItem("lastGeneratedCoupon");
-      if (lastGeneratedCoupon) {
-        if (checkInput === lastGeneratedCoupon) {
-          setLastCoupon("İndirim kuponunuzu kullanabilirsiniz.");
-        } else {
-          setLastCoupon("Yanlış kupon kodu girdiniz.");
-        }
+    const lastGeneratedCoupon = sessionStorage.getItem("lastGeneratedCoupon");
+    if (lastGeneratedCoupon) {
+      if (checkInput === lastGeneratedCoupon) {
+        setLastCoupon("İndirim kuponunuzu kullanabilirsiniz.");
       } else {
-        setLastCoupon("Hesabınıza kayıtlı bir kod bulunmuyor.");
+        setLastCoupon("Yanlış kupon kodu girdiniz.");
       }
     } else {
       setLastCoupon("Hesabınıza kayıtlı bir kod bulunmuyor.");
@@ -88,31 +84,30 @@ const Sepet = () => {
         ))}
       </ul>
 
-      {/* {cart?.cartItems?.length === 0 ? (
+      {cart.cartItems.length === 0 ? (
         ""
       ) : (
         <div className={Styles.discount}>
-          <h4>İndirim Kodu:</h4>
-          <input type="text" />
-          <button>Sorgula</button>
+          <div className={Styles.check}>
+            <h4>İndirim Kodu:</h4>
+            <input
+              value={checkInput}
+              onChange={handleInputChange}
+              type="text"
+            />
+            <button onClick={checkCoupon}>Sorgula</button>
+          </div>
+          <span
+            className={
+              lastCoupon === "İndirim kuponunuzu kullanabilirsiniz."
+                ? Styles.green
+                : Styles.red
+            }
+          >
+            {lastCoupon}
+          </span>
         </div>
-      )} */}
-      <div className={Styles.discount}>
-        <div className={Styles.check}>
-          <h4>İndirim Kodu:</h4>
-          <input value={checkInput} onChange={handleInputChange} type="text" />
-          <button onClick={checkCoupon}>Sorgula</button>
-        </div>
-        <span
-          className={
-            lastCoupon === "İndirim kuponunuzu kullanabilirsiniz."
-              ? Styles.green
-              : Styles.red
-          }
-        >
-          {lastCoupon}
-        </span>
-      </div>
+      )}
     </div>
   );
 };
