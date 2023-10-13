@@ -6,12 +6,14 @@ import Styles from "./styles.module.scss";
 import cn from "classnames";
 import Link from "next/link";
 import Image from "next/image";
+import { useIsLoggedIn } from "@/config/Hooks";
 
 const Sepet = () => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const [checkInput, setCheckInput] = useState("");
   const [lastCoupon, setLastCoupon] = useState("");
+  const isLoggedIn = useIsLoggedIn();
 
   const handleInputChange = (event) => {
     setCheckInput(event.target.value);
@@ -30,15 +32,22 @@ const Sepet = () => {
   };
 
   const checkCoupon = () => {
-    const lastGeneratedCoupon = sessionStorage.getItem("lastGeneratedCoupon");
-    if (lastGeneratedCoupon) {
-      if (checkInput === lastGeneratedCoupon) {
-        setLastCoupon("İndirim kuponunuzu kullanabilirsiniz.");
+    if (isLoggedIn === true) {
+      const lastGeneratedCoupon = sessionStorage.getItem("lastGeneratedCoupon");
+
+      if (lastGeneratedCoupon) {
+        if (checkInput === lastGeneratedCoupon) {
+          setLastCoupon("İndirim kuponunuzu kullanabilirsiniz.");
+        } else {
+          setLastCoupon("Yanlış kupon kodu girdiniz.");
+        }
       } else {
-        setLastCoupon("Yanlış kupon kodu girdiniz.");
+        setLastCoupon("Hesabınıza kayıtlı bir kod bulunmuyor.");
       }
     } else {
-      setLastCoupon("Hesabınıza kayıtlı bir kod bulunmuyor.");
+      setLastCoupon(
+        "İndirim kodu kullanmanız için hesabınıza giriş yapmalısınız."
+      );
     }
   };
   return (
