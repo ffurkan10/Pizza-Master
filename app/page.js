@@ -61,11 +61,11 @@ const Home = async () => {
         image={DataPageTr?.offer?.image}
       />
 
-      {/* <SwiperComp
+      <SwiperComp
         title={SwiperData?.publisher?.title}
         datatop={SwiperData?.publisher?.dataPublisher}
         databottom={SwiperData?.publisher?.dataPublisherBottom}
-      /> */}
+      />
 
       <Campaign />
 

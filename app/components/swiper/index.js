@@ -1,15 +1,16 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
+// import { Autoplay } from "swiper";
 import Styles from "./styles.module.scss";
 import "swiper/swiper-bundle.css";
 import SwiperCore from "swiper";
-import "swiper/css/navigation";
 import "swiper/css";
-import { Navigation } from "swiper";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-SwiperCore.use([Autoplay]);
+// SwiperCore.use([Autoplay]);
 
 const SwiperComp = ({ datatop, databottom, title }) => {
   return (
@@ -17,17 +18,18 @@ const SwiperComp = ({ datatop, databottom, title }) => {
       <div className={Styles.swiperContainer}>
         <h3>{title}</h3>
         <Swiper
-          loop={true}
+          loop
           autoplay={{
-            delay: 5000, // Örneğin, 5 saniye
+            delay: 1,
             disableOnInteraction: false,
           }}
-          speed={500} // Örneğin, 0.5 saniye
+          speed={5000}
           grabCursor
           //   modules={[Autoplay]}
+          modules={[Autoplay]}
           slidesPerView="auto"
           spaceBetween={30}
-          allowTouchMove={true}
+          allowTouchMove={false}
           className={Styles.swipper}
         >
           {datatop?.map((item) => {
@@ -42,17 +44,18 @@ const SwiperComp = ({ datatop, databottom, title }) => {
         </Swiper>
         <Swiper
           dir="rtl"
-          loop={true}
+          loop
           autoplay={{
-            delay: 5000, // Örneğin, 5 saniye
+            delay: 1,
             disableOnInteraction: false,
           }}
-          speed={500} // Örneğin, 0.5 saniye
+          speed={5000}
           grabCursor
           //   modules={[Autoplay]}
+          modules={[Autoplay]}
           slidesPerView="auto"
           spaceBetween={30}
-          allowTouchMove={true}
+          allowTouchMove={false}
           className={Styles.swipper}
         >
           {databottom?.map((item) => {
