@@ -1,5 +1,5 @@
 .swipper {
-  margin-block: 10px;
+  margin-block: 20px;
 }
 .swipper > div {
   transition-timing-function: linear !important;
@@ -8,11 +8,21 @@
     background-color: #ff6720;
     color: white;
     border-radius: 8px;
-  }
-  & > div {
-    width: 200px;
-    cursor: initial;
     display: flex;
     align-items: center;
+    justify-content: center;
+    height: 60px;
+  }
+  & > div {
+    width: 250px;
+    cursor: initial;
+    // display: flex;
+    // align-items: center;
+  }
+}
+.swiperContainer {
+  margin-block: 100px;
+  h3 {
+    margin-bottom: 30px;
   }
 }
