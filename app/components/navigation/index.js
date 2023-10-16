@@ -119,7 +119,7 @@ const Navigation = ({ data }) => {
             Çıkış Yap
           </button>
         ) : (
-          <Link className={Styles.in} href="giris-yap">
+          <Link className={Styles.in} href="/giris-yap">
             Giriş Yap
           </Link>
         )}
